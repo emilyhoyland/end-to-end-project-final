@@ -9,9 +9,9 @@ home_routes = Blueprint("home_routes", __name__)
 
 def index():
     print("HOME...")
-    return "Welcome Home"
+    return "Welcome Home to the ticker sentiment app"
 
 @home_routes.route("/about")
 def about():
     print("About...")
-    return "About Me"
+    return "About Me - I can tell you the sentiment for past few days"
