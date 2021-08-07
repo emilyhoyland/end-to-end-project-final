@@ -4,7 +4,7 @@ import flair
 import time
 import matplotlib.pyplot as plt
 from flask import Flask
-
+from datetime import datetime
 
 
 def lookup_ticker(ticker):
@@ -52,7 +52,38 @@ def lookup_ticker(ticker):
 
     # calculate the median of sentiment score for each day
     median_df_fl1 = df1.groupby(['Date']).median()
-    return median_df_fl1
+
+    median_df_fl2 = median_df_fl1.drop(columns = ['sentiment_fl', 'confidence_fl'])
+
+    median_df_fl3 = median_df_fl2.reset_index()
+
+    median_df_fl3_todict = median_df_fl3.to_dict()
+
+    a =[]
+    for i,j in median_df_fl3_todict['Date'].items():
+        a.append(format_day(j))
+
+    b = []
+    for i,j in median_df_fl3_todict['final_confidence_fl'].items():
+        b.append(j)
+
+    z = [{k:v} for k,v in zip(a,b)]
+
+
+    return z
+
+    
+
+
+
+
+
+
+def format_day(x):
+    z = x.strftime('%Y-%m-%d') 
+    return z
+
+
 
 
 
@@ -78,7 +109,7 @@ if __name__ == "__main__":
 
 
     #create a visualisation for the user to see the trend
-    median_df_fl1['final_confidence_fl'].plot()
-    plt.show()
+    #median_df_fl1['final_confidence_fl'].plot()
+    #plt.show()
 
     
