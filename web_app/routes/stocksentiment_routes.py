@@ -19,4 +19,4 @@ def stock_sentiment_api():
         return jsonify(results)
     else:
         return jsonify({"message":"Invalid ticker or stock name. Please try again"}), 404
-    
+    #return render_template("stock.html", message=message, x=5)
