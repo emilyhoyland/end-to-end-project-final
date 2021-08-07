@@ -72,9 +72,6 @@ def lookup_ticker(ticker):
 
     return z
 
-    
-
-
 
 
 
