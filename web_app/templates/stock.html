@@ -1,27 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>My App</title>
-</head>
-<body>
 
-    <h1>{{ results }}</h1>
+{% extends "layout.html" %}
 
-    <p>This is a paragraph on the "stock" page.</p>
+{% block content %}
 
-    <p>{{ x }}</p>
-    <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/stock/sentiment.json">Stock</a></li>
-        </ul>
-    </nav>
+<h1>{{ results }}</h1>
 
-    <footer>
-        <p>Thank you for visiting our App!</p>
-    </footer>
+<p>This is a paragraph on the "stock" page.</p>
 
-</body>
-</html>
+<p>{{ x }}</p>
+
+{% endblock %}
