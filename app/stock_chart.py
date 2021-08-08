@@ -1,3 +1,8 @@
+# USE THIS FILE ONLY FOR LOCAL DEMO PURPOSES WITH CHART
+# INCASE WE DO NOT HAVE A DATA VIZ ON APP'S WEBPAGE
+
+
+
 import pandas as pd
 from finvizfinance.quote import finvizfinance
 import flair
