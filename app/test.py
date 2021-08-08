@@ -20,4 +20,3 @@ def testing():
     assert result1[0] == "POSITIVE"
     assert result2[0]=="NEGATIVE"
     
-
