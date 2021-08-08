@@ -109,4 +109,11 @@ if __name__ == "__main__":
     median_df_fl1['final_confidence_fl'].plot()
     plt.show()
 
-    
+
+#title = input("enter a sentence to check its sentiment score: ")
+def sentiment_test(title):
+    import flair
+    sentiment_model_fl = flair.models.TextClassifier.load('en-sentiment')   
+    each_title = flair.data.Sentence(title)
+    sentiment_model_fl.predict(each_title)
+    return(each_title.labels[0].value, each_title.labels[0].score)
