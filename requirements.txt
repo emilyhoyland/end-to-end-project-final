@@ -13,6 +13,7 @@ sendgrid==6.6.0
 
 Flask
 flair
+gunicorn # for heroku
 #
 # TEST
 #

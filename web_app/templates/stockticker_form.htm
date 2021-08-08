@@ -1,0 +1,17 @@
+{% extends "bootstrap_layout.htm" %} {% set active_page = "stockticker_form" %} {% block content %}
+
+<h2>Stock_Ticker Form</h2>
+
+<p>Request a ticker for predicting sentiments of the company you are interested in...</p>
+
+<form action="/stock/sentiment" method="POST">
+
+    <label>Ticker:</label>
+    <input type="text" name="ticker" placeholder="AMZN" value="AMZN">
+    <br>
+
+
+    <button>Submit</button>
+</form>
+
+{% endblock %}
