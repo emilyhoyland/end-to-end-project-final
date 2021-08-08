@@ -1,7 +1,7 @@
 
 
-from flask import Blueprint, request, render_template
-
+from flask import Blueprint, request, render_template, jsonify
+from app.stock_sentiment import lookup_ticker
 home_routes = Blueprint("home_routes", __name__)
 
 @home_routes.route("/")
