@@ -106,8 +106,8 @@ if __name__ == "__main__":
 
 
     #create a visualisation for the user to see the trend
-    median_df_fl1['final_confidence_fl'].plot()
-    plt.show()
+    #median_df_fl1['final_confidence_fl'].plot()
+    #plt.show()
 
 
 #title = input("enter a sentence to check its sentiment score: ")
