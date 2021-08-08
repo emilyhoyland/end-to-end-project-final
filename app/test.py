@@ -9,4 +9,6 @@ def sentiment_test(title):
 
 if __name__ == "__main__":
     title = input("enter a sentence to check its sentiment score: ")
-    sentiment_test(title)
+    x = sentiment_test(title)
+
+    print(x)
