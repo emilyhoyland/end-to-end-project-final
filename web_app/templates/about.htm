@@ -6,12 +6,12 @@
     <p>Users may input a ticker symbol for any publicly traded stock.</p>
 
     <b> About:</b>
-    <p> After a ticker has been selected, the system will then analyze the 100 most recent news headlines for that company and generate a median investor sentiment score for the stock for each given day.</p>
+    <p> After a ticker has been selected, Valence will then analyze the 100 most recent news headlines for that company and generate a median investor sentiment score for the stock for each given day.</p>
         
     <b> Scoring:</b>
         <p>Stocks are given a daily median score ranging from -1 to 1. </p>
-        <p> -1 = Negative Sentiment: Do not invest</p>
-        <p> 0 = Neutral Sentiment: Further sources should be considered before investing</p>
-        <p> 1 = Positive Sentiment: Proceed with investment </p>
+        <p> -1 to -.51 = Negative Sentiment: Do not invest</p>
+        <p> -.5 to .5 = Neutral Sentiment: Further sources should be considered before investing</p>
+        <p> .5 to 1 = Positive Sentiment: Proceed with investment </p>
 
 {% endblock %}
