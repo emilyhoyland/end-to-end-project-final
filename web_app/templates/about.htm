@@ -1,7 +1,17 @@
 {% extends "bootstrap_layout.htm" %} {% set active_page = "about" %} {% block content %}
 
-<h1>About Me</h1>
+<h2> About Valence</h2>
 
-<p>This is an App that helps generate sentiment scores for ticker of a company selected by the investor. The user can choose to enter any ticker in the ticker form page</p>
+    <b>How To Use:</b>
+    <p>Users may input a ticker symbol for any publicly traded stock.</p>
+
+    <b> About:</b>
+    <p> After a ticker has been selected, the system will then analyze the 100 most recent news headlines for that company and generate a median investor sentiment score for the stock for each given day.</p>
+        
+    <b> Scoring:</b>
+        <p>Stocks are given a daily median score ranging from -1 to 1. </p>
+        <p> -1 = Negative Sentiment: Do not invest</p>
+        <p> 0 = Neutral Sentiment: Further sources should be considered before investing</p>
+        <p> 1 = Positive Sentiment: Proceed with investment </p>
 
 {% endblock %}
