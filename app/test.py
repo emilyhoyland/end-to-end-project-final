@@ -21,8 +21,3 @@ def testing():
     assert result2[0]=="NEGATIVE"
     
 
-if __name__ == "__main__":
-    title = input("enter a sentence to check its sentiment score: ")
-    x = sentiment_test(title)
-
-    print(x)
