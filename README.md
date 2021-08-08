@@ -1,14 +1,13 @@
 # Valence
 
-### NEED TO COMPLETE THE README FILE NOW. I GUESS THE PROBLEM WITH HEROKU IS OUR PACKAGE SIZES. GIVEN THE FREE VERSION WE DONT HAVE THAT SPACE AVAILABLE. 
-
-
 ## About
 
 Valence serves as a tool to decide whether to proceed with a potential investment based on an analysis of positive and negative sentiments for a company’s 100 most recent news headlines. Using FLAIR to generate sentiment scores, Valence will provide a daily median sentiment score to confirm if a company is trending positive or negative and advise whether to invest in a stock on a given day using the following rubric:
  
 >-1 to -.51 = Negative Sentiment: Do not invest
+
 >-0.5 to 0.5 = Neutral Sentiment: Further sources should be considered before investing
+
 >0.51 to 1 = Positive Sentiment: Proceed with investment
 
 Simply enter any stock symbol for the company you would like to analyze and let Valence do the work for you!   
@@ -21,7 +20,9 @@ Simply enter any stock symbol for the company you would like to analyze and let 
 
 ## Installation
 
-Fork this [remote repository](https://github.com/vivekagarwal14/end-to-end-project-final) under your own control, then "clone" or download your remote copy onto your local computer.
+Fork this [remote repository](https://github.com/vivekagarwal14/end-to-end-project-final) under your own control, then "clone" or download your remote copy onto your local computer
+
+We recommend saving it locally as "valence-app".
 
 Then navigate there from the command line (subsequent commands assume you are running them from the local repository's root directory):
 
@@ -44,12 +45,10 @@ pip install -r requirements.txt
 
 > NOTE: if this command throws an error like "Could not open requirements file: [Errno 2] No such file or directory", make sure you are running it from the repository's root directory, where the requirements.txt file exists (see the initial `cd` step above).
 
-## Setup
-
 
 ## Local Usage
 
-Run the Python script:
+Run the Python script from the root directory:
 
 ```py
 python app/stock_chart.py
@@ -70,8 +69,16 @@ Valence will then generate the daily median sentiment score for the last 100 new
 
 ## Web Application Usage
 
+To use Valence using a web application, make sure you are still in the local repository's root directory.
+
+Run the Python script:
+
 ```FLASK_APP=web_app flask run```
 
-localhost:5000 in browser
+When you receive the message: "Running on http://127.0.0.1:5000/", go to your web browser, type in "localhost:5000" and hit "Enter".
+
+Follow instructions on the web application to use Valence's functions.
+
+To exit your session in your terminal, press CTRL+C.
 
 
