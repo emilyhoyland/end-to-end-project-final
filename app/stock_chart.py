@@ -1,3 +1,8 @@
+# USE THIS FILE ONLY FOR LOCAL DEMO PURPOSES WITH CHART
+# INCASE WE DO NOT HAVE A DATA VIZ ON APP'S WEBPAGE
+
+#importing libraries and files
+
 import pandas as pd
 from finvizfinance.quote import finvizfinance
 import flair
@@ -7,7 +12,7 @@ from flask import Flask
 from datetime import datetime
 
 
-def lookup_ticker(ticker):
+def lookup_ticker(ticker): #calling API and calculating sentiment values
     stock = finvizfinance(ticker)
 
     news_df = stock.TickerNews()
@@ -59,7 +64,7 @@ def lookup_ticker(ticker):
 
 
 
-def format_day(x):
+def format_day(x): #formatting timestamp
     z = x.strftime('%Y-%m-%d') 
     return z
 
@@ -89,7 +94,10 @@ if __name__ == "__main__":
 
 
     #create a visualisation for the user to see the trend
-    median_df_fl1['final_confidence_fl'].plot()
+    median_df_fl1['final_confidence_fl'].plot(lw=2, colormap='jet', marker='.', markersize=10, title='Daily Median Sentiment Analysis for Stock')
+    plt.xlabel('Dates for most recent 100 news articles')
+    plt.ylabel('Median Sentiment Score')
+
     plt.show()
 
     

@@ -2,20 +2,13 @@
 
 #
 # DEVELOPMENT / PRODUCTION
-#
-finvizfinance
-matplotlib
-python-dotenv
-pgeocode
-pandas
+
+finvizfinance # Python wrapper for Finviz API
+
+matplotlib #Used for Data visualization.
+pandas 
 requests
-sendgrid==6.6.0
+Flask #Running the web app from the local host
+flair # Sentiment analysis package from huggingface
 
-Flask
-flair
-gunicorn # for heroku
-#
-# TEST
-#
-
-pytest
+pytest #testing

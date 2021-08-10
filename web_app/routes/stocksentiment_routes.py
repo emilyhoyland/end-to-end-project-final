@@ -1,5 +1,5 @@
 
-
+##importing libraries
 from flask import Blueprint, request, jsonify, render_template, redirect
 
 from app.stock_sentiment import lookup_ticker
@@ -7,7 +7,7 @@ from app.stock_sentiment import lookup_ticker
 stocksentiment_routes = Blueprint("stocksentiment_routes", __name__)
 
 @stocksentiment_routes.route("/stock/sentiment.json")
-def stock_sentiment_api():
+def stock_sentiment_api(): #calling stock sentiment
     print("STOCK SENTIMENT (API)...")
     print("URL PARAMS:", dict(request.args))
 
@@ -22,13 +22,13 @@ def stock_sentiment_api():
 
 
 @stocksentiment_routes.route("/stock/form")
-def stock_form():
+def stock_form(): #calling stock form
     print("STOCK FORM...")
     return render_template("stockticker_form.htm")
 
 
 @stocksentiment_routes.route("/stock/sentiment", methods=["GET", "POST"])
-def stocksentiment_score():
+def stocksentiment_score(): #calling sentiment score
     print("STOCK SENTIMENT SCORE...")
 
     if request.method == "GET":
@@ -39,12 +39,9 @@ def stocksentiment_score():
         request_data = dict(request.form)
 
     ticker = request_data.get("ticker") or "AMZN"
-    #zip_code = request_data.get("zip_code") or "20057"
 
     results = lookup_ticker(ticker=ticker)
     if results:
-        #flash("Weather Forecast Generated Successfully!", "success")
         return render_template("stock_sentiment.htm", ticker=ticker, results=results)
     else:
-        #flash("Geography Error. Please try again!", "danger")
         return redirect("/stock/form")
