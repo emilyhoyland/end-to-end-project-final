@@ -81,8 +81,6 @@ def format_day(x): #formatting timestamp
     z = x.strftime('%Y-%m-%d') 
     return z
 
-#title = input("enter a sentence to check its sentiment score: ")
-def sentiment_test(title): #calling the test function
 
 
 def sentiment_test(title):
