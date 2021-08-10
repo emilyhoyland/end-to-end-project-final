@@ -15,7 +15,7 @@ Simply enter any stock symbol for the company you would like to analyze and let 
 ## Prerequisites
 
   + Anaconda 3.7+
-  + Python 3.7+
+  + Python 3.8
   + Pip
 
 ## Installation
@@ -47,6 +47,7 @@ pip install -r requirements.txt
 
 
 ## Local Usage
+    ### This will produce a line chart and data information via the command line.
 
 Run the Python script from the root directory:
 
@@ -78,10 +79,10 @@ Run the Python script:
 FLASK_APP=web_app flask run
 ```
 
-When you receive the message: "Running on http://127.0.0.1:5000/", go to your web browser, type in "localhost:5000" and hit "Enter".
+This will launch a local host. You will receive the message: "Running on http://127.0.0.1:5000/", at which point please go to your web browser, type in "localhost:5000" and hit "Enter".
 
 Follow instructions on the web application to use Valence's functions.
 
-To exit your session in your terminal, press CTRL+C.
+To exit your session, please click CTRL+C (via the command line) or close your terminal window.
 
 

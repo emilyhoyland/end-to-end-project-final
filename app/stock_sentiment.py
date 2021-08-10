@@ -1,3 +1,4 @@
+#importing libraries and files
 import pandas as pd
 from finvizfinance.quote import finvizfinance
 import flair
@@ -7,7 +8,7 @@ from flask import Flask
 from datetime import datetime
 
 
-def lookup_ticker(ticker):
+def lookup_ticker(ticker): #calling API and calculating sentiment values
     stock = finvizfinance(ticker)
 
     news_df = stock.TickerNews()
@@ -76,12 +77,12 @@ def lookup_ticker(ticker):
 
 
 
-def format_day(x):
+def format_day(x): #formatting timestamp
     z = x.strftime('%Y-%m-%d') 
     return z
 
 #title = input("enter a sentence to check its sentiment score: ")
-def sentiment_test(title):
+def sentiment_test(title): #calling the test function
     import flair
     sentiment_model_fl = flair.models.TextClassifier.load('en-sentiment')   
     each_title = flair.data.Sentence(title)
@@ -109,10 +110,6 @@ if __name__ == "__main__":
     timetaken = finish_time - start_time
     print('Total Run Time for the code was: ', timetaken)
 
-
-    #create a visualisation for the user to see the trend
-    #median_df_fl1['final_confidence_fl'].plot()
-    #plt.show()
 
 
 

@@ -1,7 +1,7 @@
 # USE THIS FILE ONLY FOR LOCAL DEMO PURPOSES WITH CHART
 # INCASE WE DO NOT HAVE A DATA VIZ ON APP'S WEBPAGE
 
-
+#importing libraries and files
 
 import pandas as pd
 from finvizfinance.quote import finvizfinance
@@ -12,7 +12,7 @@ from flask import Flask
 from datetime import datetime
 
 
-def lookup_ticker(ticker):
+def lookup_ticker(ticker): #calling API and calculating sentiment values
     stock = finvizfinance(ticker)
 
     news_df = stock.TickerNews()
@@ -64,7 +64,7 @@ def lookup_ticker(ticker):
 
 
 
-def format_day(x):
+def format_day(x): #formatting timestamp
     z = x.strftime('%Y-%m-%d') 
     return z
 
