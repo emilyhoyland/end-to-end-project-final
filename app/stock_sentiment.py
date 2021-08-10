@@ -83,6 +83,9 @@ def format_day(x): #formatting timestamp
 
 #title = input("enter a sentence to check its sentiment score: ")
 def sentiment_test(title): #calling the test function
+
+
+def sentiment_test(title):
     import flair
     sentiment_model_fl = flair.models.TextClassifier.load('en-sentiment')   
     each_title = flair.data.Sentence(title)
