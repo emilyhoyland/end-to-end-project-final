@@ -1,10 +1,9 @@
 {% extends "bootstrap_layout.htm" %} {% set active_page = "stockticker_form" %} {% block content %}
 
-<h2>Stock_Ticker Form</h2>
+<h2>Stock Ticker Selection</h2>
 
-<p>Enter the ticker symbol to receive a median sentiment score for the company you are interested in...</p>
+<p>Enter the ticker symbol for the company you are interested in to receive a median daily sentiment score...</p>
 
-<p>The median sentiment of the ticker chosen for respective day will be shown below. </p>
 
 <form action="/stock/sentiment" method="POST">
 
@@ -15,5 +14,8 @@
 
     <button>Submit</button>
 </form>
+
+<p>The median daily sentiments of the ticker chosen will generated shortly! </p>
+<p>(Please allow up to 30 seconds to receive your results)</p>
 
 {% endblock %}

@@ -52,7 +52,8 @@ Run the Python script from the root directory:
 
 ```py
 python app/stock_chart.py
-
+```
+```py
 # alternative module-style invocation (only required if importing from one file to another):
 python -m app.stock_chart
 ```
@@ -73,7 +74,9 @@ To use Valence using a web application, make sure you are still in the local rep
 
 Run the Python script:
 
-```FLASK_APP=web_app flask run```
+```py
+FLASK_APP=web_app flask run
+```
 
 When you receive the message: "Running on http://127.0.0.1:5000/", go to your web browser, type in "localhost:5000" and hit "Enter".
 

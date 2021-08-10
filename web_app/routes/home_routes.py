@@ -22,7 +22,7 @@ def about():
 @home_routes.route("/hello")
 def hello_world():
     print("Welcome....", dict(request.args))
-    name = request.args.get("name") or "Investor to our App"
+    name = request.args.get("name") or "Investor"
     message = f"Hello {name}!"
     # return message
     return render_template('hello.htm', message=message)
