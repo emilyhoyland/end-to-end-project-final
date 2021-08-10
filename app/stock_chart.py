@@ -94,7 +94,7 @@ if __name__ == "__main__":
 
 
     #create a visualisation for the user to see the trend
-    median_df_fl1['final_confidence_fl'].plot(lw=2, colormap='jet', marker='.', markersize=10, title='Sentiment Trend Analysis of Stocks')
+    median_df_fl1['final_confidence_fl'].plot(lw=2, colormap='jet', marker='.', markersize=10, title='Daily Median Sentiment Analysis for Stock')
     plt.xlabel('Dates for most recent 100 news articles')
     plt.ylabel('Median Sentiment Score')
 
